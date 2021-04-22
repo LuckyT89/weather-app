@@ -37,8 +37,6 @@ fetch(`https://geocode.xyz/${myPlace}?region=US&geoit=json`)
   return response.json();
 })
 .then(function(json) {
-  console.log(`The latitude of ${myPlace} is ${json.latt} and the longitude is ${json.longt}`);
-
 
     // When the latitude and longitude is returned, the inner fetch function makes a request to a weather API and gets
     // an object that includes the current temperature and weather for the given coordinates. 
