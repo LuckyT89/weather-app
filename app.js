@@ -1,4 +1,4 @@
-let myPlace = 'miami, fl';
+let myPlace = 'basking ridge, nj';
 
 
 
@@ -29,13 +29,9 @@ function appendCard(card) {
 
 
 
-let test = createTempCard('tampa bay', 95, 'sunny');
-appendCard(test);
 
-
-
-
-
+// The outer fetch function takes the text value of the location and makes a request to a geolocation API and gets an object
+// that includes the latitude and longitude of the location as a response. 
 fetch(`https://geocode.xyz/${myPlace}?region=US&geoit=json`)
 .then(function(response) {
   return response.json();
@@ -44,19 +40,19 @@ fetch(`https://geocode.xyz/${myPlace}?region=US&geoit=json`)
   console.log(`The latitude of ${myPlace} is ${json.latt} and the longitude is ${json.longt}`);
 
 
-
-
-  fetch(`https://www.7timer.info/bin/civil.php?lon=${json.longt}&lat=${json.latt}&ac=0&unit=british&output=json&tzshift=0`)
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(json) {
-    console.log(`Currently ${myPlace} is ${json.dataseries[0].temp2m} degrees and it is ${json.dataseries[0].weather}.`);
-
-    let data = createTempCard(myPlace, json.dataseries[0].temp2m, json.dataseries[0].weather);
-    appendCard(data);
-  
-  });
-
+    // When the latitude and longitude is returned, the inner fetch function makes a request to a weather API and gets
+    // an object that includes the current temperature and weather for the given coordinates. 
+    fetch(`https://www.7timer.info/bin/civil.php?lon=${json.longt}&lat=${json.latt}&ac=0&unit=british&output=json&tzshift=0`)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(json) {
+        let data = createTempCard(myPlace, json.dataseries[0].temp2m, json.dataseries[0].weather);
+        appendCard(data);
+    });
 
 });
+
+
+
+
