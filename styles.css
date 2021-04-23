@@ -9,6 +9,10 @@ h1 {
     font-size: 6em;
 }
 
+
+
+
+/* Form section */
 div#form{
     /* border: 1px solid lime; */
     text-align: center;
@@ -29,4 +33,16 @@ input#location-textbox {
 
 button#weather-btn {
     font-size: 2em;
+}
+
+
+
+
+
+/* Results section */
+div#output-container {
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
