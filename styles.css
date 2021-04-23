@@ -2,3 +2,9 @@ body {
     background-color: #19c3fb;
 }
 
+h1 {
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    color: white;
+    font-size: 6em;
+}
