@@ -52,3 +52,10 @@ h2 {
     margin: 0px;
     padding: 0px;
 }
+
+/* There is an extra degree symbol added in front of the temperature number to help with 
+alignment issues and then set to hidden here so it does not actually display
+*/
+span {
+    visibility: hidden;
+}

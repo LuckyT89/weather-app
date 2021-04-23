@@ -8,8 +8,9 @@ function createTempCard(location, temp, weather) {
     const tempH2 = document.createElement('h2');
     const weatherH4 = document.createElement('h4');
 
+    // &#730; is the HTML code for the degrees symbol. An additional one is added in front of the temp inside a span and hidden with CSS to help with aligment issues. 
     locationH3.textContent = location;
-    tempH2.innerHTML = temp + '&#730;'; // This is the HTML code for the degrees symbol
+    tempH2.innerHTML = '<span>&#730;</span>' + temp + '&#730;'; 
     weatherH4.textContent = weather;
 
     card.appendChild(locationH3);
