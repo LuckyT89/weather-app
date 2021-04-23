@@ -46,3 +46,9 @@ div#output-container {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
+
+h2 {
+    font-size: 6em;
+    margin: 0px;
+    padding: 0px;
+}

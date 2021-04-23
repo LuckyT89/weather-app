@@ -4,17 +4,17 @@
 // Create a card with all the information to be displayed on screen
 function createTempCard(location, temp, weather) {
     const card = document.createElement('div');
-    const locationH2 = document.createElement('h2');
+    const locationH3 = document.createElement('h3');
     const tempH2 = document.createElement('h2');
-    const weatherH3 = document.createElement('h3');
+    const weatherH4 = document.createElement('h4');
 
-    locationH2.textContent = location;
+    locationH3.textContent = location;
     tempH2.innerHTML = temp + '&#730;'; // This is the HTML code for the degrees symbol
-    weatherH3.textContent = weather;
+    weatherH4.textContent = weather;
 
-    card.appendChild(locationH2);
+    card.appendChild(locationH3);
     card.appendChild(tempH2);
-    card.appendChild(weatherH3);
+    card.appendChild(weatherH4);
 
     return card;
 }
