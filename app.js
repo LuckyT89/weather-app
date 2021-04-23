@@ -1,4 +1,4 @@
-let myPlace = 'basking ridge, nj';
+
 
 
 // Create a card with all the information to be displayed on screen
@@ -29,6 +29,7 @@ function appendCard(card) {
 
 
 
+// Remove info that does not need to be displayed anymore
 function prepDisplay() {
     document.getElementById('location-textbox').value = '';  // Clear text inputbox after button is clicked
     document.getElementById('output-container').innerHTML = ''; // Clear previous displayed data when user searches new location
@@ -36,7 +37,9 @@ function prepDisplay() {
 
 
 
-function getData() {
+// This main function displays the correct location/weather data to the screen using the helper functions above
+// when the Get Weather button is clicked. 
+function displayData() {
     const userInput = document.getElementById('location-textbox').value;
 
     prepDisplay();
@@ -48,7 +51,8 @@ function getData() {
         return response.json();
     })
     .then(function(json) {
-        console.log(json);
+        // console.log(json);
+
         // When the latitude and longitude is returned, the inner fetch function makes a request to a weather API and gets
         // an object that includes the current temperature and weather for the given coordinates. 
         fetch(`https://www.7timer.info/bin/civil.php?lon=${json.longt}&lat=${json.latt}&ac=0&unit=british&output=json&tzshift=0`)
@@ -56,9 +60,10 @@ function getData() {
             return response.json();
         })
         .then(function(json) {
+            // console.log(json);
+
             let data = createTempCard(userInput, json.dataseries[0].temp2m, json.dataseries[0].weather);
             appendCard(data);
-            // console.log(json);
         });
 
     });
@@ -67,4 +72,4 @@ function getData() {
 
 
 const button = document.getElementById('weather-btn');
-button.addEventListener('click', getData);
+button.addEventListener('click', displayData);
