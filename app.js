@@ -37,10 +37,10 @@ function getData() {
     // that includes the latitude and longitude of the location as a response. 
     fetch(`https://geocode.xyz/${userInput}?region=US&geoit=json`)
     .then(function(response) {
-    return response.json();
+        return response.json();
     })
     .then(function(json) {
-
+        console.log(json);
         // When the latitude and longitude is returned, the inner fetch function makes a request to a weather API and gets
         // an object that includes the current temperature and weather for the given coordinates. 
         fetch(`https://www.7timer.info/bin/civil.php?lon=${json.longt}&lat=${json.latt}&ac=0&unit=british&output=json&tzshift=0`)
@@ -50,7 +50,7 @@ function getData() {
         .then(function(json) {
             let data = createTempCard(userInput, json.dataseries[0].temp2m, json.dataseries[0].weather);
             appendCard(data);
-            console.log(json);
+            // console.log(json);
         });
 
     });
