@@ -29,9 +29,17 @@ function appendCard(card) {
 
 
 
+function prepDisplay() {
+    document.getElementById('location-textbox').value = '';  // Clear text inputbox after button is clicked
+    document.getElementById('output-container').innerHTML = ''; // Clear previous displayed data when user searches new location
+}
+
+
 
 function getData() {
     const userInput = document.getElementById('location-textbox').value;
+
+    prepDisplay();
 
     // The outer fetch function takes the text value of the location and makes a request to a geolocation API and gets an object
     // that includes the latitude and longitude of the location as a response. 
