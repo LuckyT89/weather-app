@@ -24,7 +24,8 @@ label {
     /* border: 1px solid black; */
     display: block;
     margin: 10px;
-    font-size: 2em;
+    font-size: 1.5em;
+    font-family: arial;
 }
 
 input#location-textbox {
