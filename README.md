@@ -1,6 +1,7 @@
 MAIN
     -fix spacing
     -convert weather status names
+    -make placeholder text reappear only after content loads
 
 
 

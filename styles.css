@@ -66,8 +66,17 @@ div#output-container {
 h2 {
     font-size: 6em;
     margin: 0px;
-    padding: 0px;
+    padding: 20px;
+    /* border: 1px solid black; */
+    line-height: 0.8em;
 }
+h3 {
+    margin-bottom: 30px;
+}
+h4 {
+    margin-top: 30px;
+}
+
 
 /* There is an extra degree symbol added in front of the temperature number to help with 
 alignment issues and then set to hidden here so it does not actually display
