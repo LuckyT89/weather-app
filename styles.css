@@ -29,8 +29,11 @@ label {
 }
 
 input#location-textbox {
-    
     font-size: 2em;
+    color: gray;
+}
+input#location-textbox:focus {
+    outline: none;
 }
 
 button#weather-btn {
