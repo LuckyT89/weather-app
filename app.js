@@ -113,12 +113,6 @@ function appendCard(card) {
 
 
 
-// Remove info that does not need to be displayed anymore
-function prepDisplay() {
-    
-    
-}
-
 const spinner = document.getElementById('loading-gif');
 
 // This main function displays the correct location/weather data to the screen using the helper functions above
