@@ -55,6 +55,19 @@ button#weather-btn:hover {
 
 
 
+/* Loading spinner image section */
+img {
+    width: 64px;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    display: block;
+}
+
+
+
+
+
+
 /* Results section */
 div#output-container {
     text-align: center;
@@ -71,6 +84,7 @@ h2 {
     line-height: 0.8em;
 }
 h3 {
+    margin-top: 0px;
     margin-bottom: 30px;
 }
 h4 {
