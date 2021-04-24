@@ -84,3 +84,27 @@ alignment issues and then set to hidden here so it does not actually display
 span {
     visibility: hidden;
 }
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    body {
+        /* background-color: blue; */
+    }
+    button#weather-btn {
+        margin-top: 10px;
+        font-size: 1em;
+        display: inline-block;
+        
+    }
+    input#location-textbox, label {
+        font-size: 1em;
+    }
+    h1, h2 {
+        font-size: 4em;
+        
+    }
+}
