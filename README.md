@@ -1,11 +1,6 @@
 MAIN
-    -fix spacing
     -convert weather status names
     -make placeholder text reappear only after content loads
-
-
-
-OTHER
-    -add browser tab logo
+    -make media query for temp number
     -add loading spinner
-    -add weather images
+    -add browser tab logo

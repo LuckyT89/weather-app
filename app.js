@@ -1,6 +1,88 @@
 
 
 
+function convertWeather(oldWeather) {
+    let newWeather;
+
+    switch(oldWeather) {
+        case 'clearday':
+        case 'clearnight':
+            newWeather = 'Clear';
+            break;
+        
+        case 'pcloudyday':
+        case 'pcloudynight':
+            newWeather = 'Partly Cloudy';
+            break;
+
+        case 'mcloudyday':
+        case 'mcloudynight':
+            newWeather = 'Cloudy';
+            break;
+
+        case 'cloudyday':
+        case 'cloudynight':
+            newWeather = 'Very Cloudy';
+            break;
+
+        case 'humidday':
+        case 'humidnight':
+            newWeather = 'Foggy';
+            break;
+
+        case 'lightrainday':
+        case 'lightrainnight':
+            newWeather = 'Light Rain';
+            break;
+
+        case 'oshowerday':
+        case 'oshowernight':
+            newWeather = 'Occasional Showers';
+            break;
+
+        case 'ishowerday':
+        case 'ishowernight':
+            newWeather = 'Isolated Showers';
+            break;
+
+        case 'lightsnowday':
+        case 'lightsnownight':
+            newWeather = 'Light Snow';
+            break;
+
+        case 'rainday':
+        case 'rainnight':
+            newWeather = 'Rain';
+            break;
+
+        case 'snowday':
+        case 'snownight':
+            newWeather = 'Snow';
+            break;
+
+        case 'rainsnowday':
+        case 'rainsnownight':
+            newWeather = 'Rain and Snow';
+            break;
+
+        case 'tsday':
+        case 'tsnight':
+            newWeather = 'Thunderstorm Possible';
+            break;
+
+        case 'tsrainday':
+        case 'tsrainnight':
+            newWeather = 'Thunderstorm';
+            break;
+
+        default:
+            newWeather = 'Exact weather condition unkown';
+    }
+
+    return newWeather;
+}
+
+
 // Create a card with all the information to be displayed on screen
 function createTempCard(location, temp, weather) {
     const card = document.createElement('div');
@@ -11,7 +93,7 @@ function createTempCard(location, temp, weather) {
     // &#730; is the HTML code for the degrees symbol. An additional one is added in front of the temp inside a span and hidden with CSS to help with aligment issues. 
     locationH3.textContent = location;
     tempH2.innerHTML = '<span>&#730;</span>' + temp + '&#730;'; 
-    weatherH4.textContent = weather;
+    weatherH4.textContent = convertWeather(weather);
 
     card.appendChild(locationH3);
     card.appendChild(tempH2);
