@@ -3,7 +3,6 @@ MAIN
     -convert weather status names
     -style button
     -change input box text color
-    -change main header font
 
 
 
