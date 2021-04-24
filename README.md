@@ -1,7 +1,6 @@
 MAIN
     -fix spacing
     -convert weather status names
-    -style button
 
 
 

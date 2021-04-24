@@ -38,6 +38,17 @@ input#location-textbox:focus {
 
 button#weather-btn {
     font-size: 2em;
+    background-color: #12a623;
+    color: white;
+    transition-duration: 0.4s;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-left: 15px;
+}
+button#weather-btn:hover {
+    background-color: #11c226;
+    
 }
 
 
