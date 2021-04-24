@@ -15,13 +15,11 @@ h1 {
 
 /* Form section */
 div#form{
-    /* border: 1px solid lime; */
     text-align: center;
     color: white;
 }
 
 label {
-    /* border: 1px solid black; */
     display: block;
     margin: 10px;
     font-size: 1.5em;
@@ -48,7 +46,6 @@ button#weather-btn {
 }
 button#weather-btn:hover {
     background-color: #11c226;
-    
 }
 
 
@@ -84,7 +81,6 @@ h2 {
     font-size: 6em;
     margin: 0px;
     padding: 20px;
-    /* border: 1px solid black; */
     line-height: 0.8em;
 }
 h3 {
@@ -107,22 +103,17 @@ span {
 
 
 
-
+/* Adjust sizing and spacing for smaller screen sizes */
 @media screen and (max-width: 700px) {
-    body {
-        /* background-color: blue; */
-    }
     button#weather-btn {
         margin-top: 10px;
         font-size: 1em;
         display: inline-block;
-        
     }
     input#location-textbox, label {
         font-size: 1em;
     }
     h1, h2 {
         font-size: 4em;
-        
     }
 }

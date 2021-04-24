@@ -1,6 +1,5 @@
 
-
-// Converts the weather codes from the API to more readable forms
+// Converts the weather codes from the weather API to more readable forms
 function convertWeather(oldWeather) {
     let newWeather;
 
@@ -115,6 +114,8 @@ function appendCard(card) {
 
 const spinner = document.getElementById('loading-gif');
 
+
+
 // This main function displays the correct location/weather data to the screen using the helper functions above
 // when the Get Weather button is clicked. 
 function displayData() {
@@ -147,7 +148,7 @@ function displayData() {
             let data = createTempCard(userInput, json.dataseries[0].temp2m, json.dataseries[0].weather);
             appendCard(data);
 
-            // Clear text inputbox after button is clicked
+            // Clear text inputbox after display data is added
             document.getElementById('location-textbox').value = ''; 
 
             // Remove class attribute so the loading gif will go back to default CSS and be hidden
