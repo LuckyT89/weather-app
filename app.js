@@ -1,6 +1,6 @@
 
 
-
+// Converts the weather codes from the API to more readable forms
 function convertWeather(oldWeather) {
     let newWeather;
 
@@ -83,6 +83,7 @@ function convertWeather(oldWeather) {
 }
 
 
+
 // Create a card with all the information to be displayed on screen
 function createTempCard(location, temp, weather) {
     const card = document.createElement('div');
@@ -114,8 +115,8 @@ function appendCard(card) {
 
 // Remove info that does not need to be displayed anymore
 function prepDisplay() {
-    document.getElementById('location-textbox').value = '';  // Clear text inputbox after button is clicked
-    document.getElementById('output-container').innerHTML = ''; // Clear previous displayed data when user searches new location
+    
+    
 }
 
 
@@ -125,7 +126,8 @@ function prepDisplay() {
 function displayData() {
     const userInput = document.getElementById('location-textbox').value;
 
-    prepDisplay();
+    // Clear previous displayed data when user searches new location
+    document.getElementById('output-container').innerHTML = ''; 
 
     // The outer fetch function takes the text value of the location and makes a request to a geolocation API and gets an object
     // that includes the latitude and longitude of the location as a response. 
@@ -147,6 +149,9 @@ function displayData() {
 
             let data = createTempCard(userInput, json.dataseries[0].temp2m, json.dataseries[0].weather);
             appendCard(data);
+
+            // Clear text inputbox after button is clicked
+            document.getElementById('location-textbox').value = ''; 
         });
 
     });
