@@ -61,6 +61,10 @@ img {
     margin: 20px auto;
     margin-bottom: 0px;
     display: block;
+    visibility: hidden;
+}
+img.show {
+    visibility: visible;
 }
 
 

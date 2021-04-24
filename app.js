@@ -119,12 +119,15 @@ function prepDisplay() {
     
 }
 
-
+const spinner = document.getElementById('loading-gif');
 
 // This main function displays the correct location/weather data to the screen using the helper functions above
 // when the Get Weather button is clicked. 
 function displayData() {
     const userInput = document.getElementById('location-textbox').value;
+
+    // Add class so CSS will display the loading gif
+    spinner.classList.add('show');
 
     // Clear previous displayed data when user searches new location
     document.getElementById('output-container').innerHTML = ''; 
@@ -152,6 +155,9 @@ function displayData() {
 
             // Clear text inputbox after button is clicked
             document.getElementById('location-textbox').value = ''; 
+
+            // Remove class attribute so the loading gif will go back to default CSS and be hidden
+            spinner.removeAttribute('class');
         });
 
     });
